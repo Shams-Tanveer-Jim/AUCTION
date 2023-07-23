@@ -4,13 +4,19 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+AUCTION is a sophisticated and user-friendly mobile application designed to facilitate seamless auctions for a diverse range of products. Our application provides a streamlined platform where users can view and participate in ongoing auctions, as well as initiate their own auction listings. Emphasizing accessibility and user experience, AUCTION caters to both auction enthusiasts and sellers, delivering a feature-rich solution for a smooth and enjoyable bidding process.
 
-A few resources to get you started if this is your first Flutter project:
+## Package Used
+* firebase_core
+* firebase_storage
+* fl_chart
+* firebase_auth
+* cloud_firestore
+* google_sign_in
+* get
+* flutter_launcher_icons
+* intl
+* image_picker
+* cached_network_image
+* shimmer
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
