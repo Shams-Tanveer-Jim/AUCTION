@@ -7,6 +7,7 @@ import 'package:intl/intl.dart';
 import '../consts/assets.dart';
 import '../models/auction_item_model.dart';
 import '../services/image_picker.dart';
+import '../views/widgets/dialogBox.dart';
 
 class FormController extends GetxController {
   final TextEditingController endDateController = TextEditingController();
@@ -63,6 +64,7 @@ class FormController extends GetxController {
   }
 
   submitData(BuildContext context) async {
+    showLoading(context);
     if (validateForm()) {
       if (pickedImage != null) {
         imageUrl = await ImagePickerService.getDownLoadableUrl(
@@ -86,6 +88,7 @@ class FormController extends GetxController {
       descriptionController.clear();
       imageController.clear();
       bidPriceController.clear();
+      quantityController.clear();
       endDateController.clear();
 
       await FirebaseFirestore.instance
@@ -98,5 +101,6 @@ class FormController extends GetxController {
         Navigator.pop(context);
       });
     }
+    Navigator.pop(context);
   }
 }

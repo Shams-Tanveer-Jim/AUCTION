@@ -194,7 +194,8 @@ class DashBoardScreen extends StatelessWidget {
       PieChartSectionData(
         color: Colors.greenAccent,
         value: (totalAuctionWithBids / totalAuction) * 100,
-        title: '${(totalAuctionWithBids / totalAuction) * 100}%',
+        title:
+            '${((totalAuctionWithBids / totalAuction) * 100).toPrecision(2)}%',
         radius: radius,
         titleStyle: const TextStyle(
           fontSize: fontSize,
@@ -206,7 +207,8 @@ class DashBoardScreen extends StatelessWidget {
       PieChartSectionData(
         color: Colors.amber,
         value: (totalAuctionWithoutBids / totalAuction) * 100,
-        title: '${(totalAuctionWithoutBids / totalAuction) * 100}%',
+        title:
+            '${((totalAuctionWithoutBids / totalAuction) * 100).toPrecision(2)}%',
         radius: radius,
         titleStyle: const TextStyle(
           fontSize: fontSize,

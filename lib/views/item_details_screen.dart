@@ -336,8 +336,8 @@ class TableHeader extends StatelessWidget {
 }
 
 class TableContents extends StatelessWidget {
-  Bidder bidder;
-  TableContents(this.bidder, {super.key});
+  final Bidder bidder;
+  const TableContents(this.bidder, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:bidbox/services/google_signin.dart';
+import 'package:bidbox/views/widgets/dialogbox.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                 AssetsConstant.logo,
                 scale: 3,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Text(
@@ -40,7 +41,7 @@ class LoginScreen extends StatelessWidget {
                 style: GoogleFonts.comicNeue(
                     fontSize: 34, fontWeight: FontWeight.w800),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -49,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5)),
                 child: ElevatedButton.icon(
                     onPressed: () {
-                      GoogleServices.signInWithGoogle();
+                      GoogleServices.signInWithGoogle(context);
                     },
                     icon: Image.asset(
                       AssetsConstant.google,

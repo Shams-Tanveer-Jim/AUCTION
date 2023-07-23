@@ -60,13 +60,13 @@ class _SplashScreenState extends State<SplashScreen> {
                 scale: 3,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Text(
               "AUCTION",
-              style: GoogleFonts.comicNeue(
-                  fontSize: 34, fontWeight: FontWeight.w800),
+              style: GoogleFonts.carterOne(
+                  fontSize: 34, fontWeight: FontWeight.w400),
             )
           ],
         ),

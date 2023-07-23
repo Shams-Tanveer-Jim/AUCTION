@@ -1,4 +1,5 @@
 import 'package:bidbox/models/bidder_model.dart';
+import 'package:bidbox/views/widgets/dialogbox.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,7 @@ class ItemController extends GetxController {
     if (bidAmountController.text == "") {
       bidAmountError.value = "Please Enter Bid Amount";
     } else {
+      showLoading(context);
       bidAmountError.value = "";
       User currentUser = FirebaseAuth.instance.currentUser!;
       var bidder = Bidder(
@@ -43,9 +45,11 @@ class ItemController extends GetxController {
         FirebaseFirestore.instance
             .collection("userbids")
             .add({"id": itemId, "userId": currentUser.uid}).then((value) {
+          bidAmountController.clear();
           Navigator.pop(context);
         });
       });
+      Navigator.pop(context);
     }
   }
 
@@ -75,6 +79,7 @@ class ItemController extends GetxController {
             .collection("auctionitems")
             .doc(itemId)
             .update({"bidders": updatedBidders}).then((value) {
+          bidAmountController.clear();
           Navigator.pop(context);
         });
       });

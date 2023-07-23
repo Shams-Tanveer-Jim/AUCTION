@@ -83,8 +83,8 @@ class _ParentScreenState extends State<ParentScreen> {
                   centerTitle: true,
                   leading: Container(),
                   title: Text("AUCTION",
-                      style: GoogleFonts.comicNeue(
-                          fontSize: 22, fontWeight: FontWeight.w800)),
+                      style: GoogleFonts.carterOne(
+                          fontSize: 26, fontWeight: FontWeight.w400)),
                   actions: [
                     IconButton(
                         onPressed: () {
@@ -105,9 +105,12 @@ class _ParentScreenState extends State<ParentScreen> {
                       selectedLabelStyle: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 12 // Set the color of the selected label
-                          ),
+                          fontSize: 11),
                       unselectedItemColor: Colors.white,
+                      unselectedLabelStyle: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 10),
                       selectedItemColor: Colors.black,
                       type: BottomNavigationBarType.fixed,
                       currentIndex: _selectedIndex,

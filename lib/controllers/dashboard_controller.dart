@@ -27,12 +27,13 @@ class DashBoradController extends GetxController {
                   .inMinutes >
               0) {
             totalAuctionRunning += 1;
-            totalAuctionPrice += int.parse(item.quantity ?? "0") *
-                int.parse(item.bidders?.first.bidPrice ?? "0");
           } else {
+            totalAuctionPrice += (item.bidders ?? []).isEmpty
+                ? 0
+                : int.parse(item.quantity ?? "0") *
+                    int.parse(item.bidders?.first.bidPrice ?? "0");
             totalAuctionEnded += 1;
           }
-
           if ((item.bidders ?? []).isNotEmpty) {
             totalAuctionWithBids += 1;
           } else {

@@ -27,9 +27,9 @@ class MyBidsScreen extends StatelessWidget {
             controller: _auctionController.searchController,
             decoration: StyleConstants.textInputDecoration("Search").copyWith(
                 fillColor: Colors.black.withOpacity(0.3),
-                hintStyle: TextStyle(color: Colors.white),
+                hintStyle: const TextStyle(color: Colors.white),
                 prefixIconColor: Colors.white,
-                prefixIcon: Icon(Icons.search)),
+                prefixIcon: const Icon(Icons.search)),
           ),
         ),
         Expanded(

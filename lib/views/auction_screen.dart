@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:bidbox/consts/styles.dart';
 import 'package:bidbox/controllers/auction_controller.dart';
 import 'package:bidbox/models/auction_item_model.dart';
@@ -29,9 +27,9 @@ class AuctionScreen extends StatelessWidget {
             controller: _auctionController.searchController,
             decoration: StyleConstants.textInputDecoration("Search").copyWith(
                 fillColor: Colors.black.withOpacity(0.3),
-                hintStyle: TextStyle(color: Colors.white),
+                hintStyle: const TextStyle(color: Colors.white),
                 prefixIconColor: Colors.white,
-                prefixIcon: Icon(Icons.search)),
+                prefixIcon: const Icon(Icons.search)),
           ),
         ),
         Expanded(

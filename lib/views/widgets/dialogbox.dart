@@ -137,3 +137,20 @@ void showbidAmountDialog(BuildContext context, bool isUpdate) {
     },
   );
 }
+
+void showLoading(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return const Center(
+        child: SizedBox(
+          height: 50,
+          width: 50,
+          child: CircularProgressIndicator(
+            color: Colors.white,
+          ),
+        ),
+      );
+    },
+  );
+}

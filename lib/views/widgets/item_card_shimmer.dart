@@ -1,5 +1,4 @@
 import 'package:bidbox/views/widgets/shimmer_widget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ItemCardShimmer extends StatelessWidget {
