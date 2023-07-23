@@ -20,4 +20,7 @@ AUCTION is a sophisticated and user-friendly mobile application designed to faci
 * cached_network_image
 * shimmer
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 628f58ad98fb9a3b194d1373867d5a045264c9ab
